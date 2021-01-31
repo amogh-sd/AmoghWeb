@@ -9,7 +9,7 @@ var form, player, game;
 
 
 function setup() {
-  canvas = createCanvas(1500, 800);
+  canvas = createCanvas(displayWidth, displayHeight);
   database = firebase.database();
   game = new Game();
   game.getState();
@@ -18,18 +18,18 @@ function setup() {
 
 
 function draw() {
-  background("white")
+  background("Yellow")
   textSize(35)
-  
-  text("Don't worry, we don't store you name, or any other info.", 50, 330)
+
+  text("Don't worry, we don't store you name, or any other info.", 50, 180)
   textSize(20)
 
-  text("Times people visited: " + playerCount + " and counting! (some people skip this part... so this is not a very accurate number)", 20, 400)
+  text("Times people visited: " + playerCount + " and counting! (*this is not a very accurate number)", 20, 210)
   textSize(18)
-  text("please help in increasing it, by sharing this website to as many people as possible", 10, 430)
+  text("please help in increasing it, by sharing this website to as many people as possible", 20, 240)
   textSize(23)
-   text("What this page wants to tell you:", 10, 475)
-  text("I am sorry for being so un-attractive... but i hope u find my share of attraction in the up coming pages", 10, 500)
+  text("What this page wants to tell you:", 40, 475)
+  text("I am sorry for being so un-attractive... but i hope u find my share of attraction in the up coming pages", 20, 500)
 
 
   drawSprites()
